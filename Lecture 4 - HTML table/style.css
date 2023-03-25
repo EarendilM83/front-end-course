@@ -2,17 +2,14 @@ body{
     background-image: url(../baseAssets/images/TheCyberFirefly_The_lord_of_the_rings_squad_front_view_perspect_db5acb58-c540-4429-a341-8047cc75d632.png);
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+   
     
 }
 
 .main-wrapper{
     /* margin-top: 150px; */
     width: 1000px;
-    height: 500px;
+    height: 600px;
     /* margin: 0 auto; */
      
   background-color: rgba(0, 0, 0, 0.5);
@@ -24,18 +21,106 @@ body{
  
 
 }
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.39);
+    width: 100vw;
+    height: 100vh;
+}
 
 .main-wrapper:hover{
-    box-shadow: 
-    0 0 0 12px rgba(23, 114, 110, 0.055), /* Create an outer glow effect with a dark color */
-    0 0 18px rgba(9, 96, 167, 0.205),
-    0 0 8px rgba(57, 36, 92, 0.3),
-    0 0 18px rgba(255, 255, 255, 0.3),
+    transition: opacity 100ms linear;
+    animation: glow 2.2s linear infinite;
+}
 
-    inset 0 0 8px rgba(64, 109, 160, 0.2);
+@keyframes glow {
+    0%{
+        box-shadow: 
+        0 0 0 1px rgba(23, 114, 110, 0.055), /* Create an outer glow effect with a dark color */
+        0 0 65px rgba(9, 96, 167, 0.205),
+        0 0 118px rgba(57, 36, 92, 0.3),
+        0 0 18px rgba(255, 255, 255, 0.3),
+    
+        inset 0 0 8px rgba(64, 109, 160, 0.2);
+    }
+    2%{
+        box-shadow: 
+        0 0 0 1px rgba(221, 67, 2, 0.055), /* Create an outer glow effect with a dark color */
+        0 0 65px rgba(12, 167, 9, 0.205),
+        0 0 118px rgba(156, 186, 8, 0.3),
+        0 0 18px rgba(255, 149, 0, 0.3),
+    
+        inset 0 0 8px rgba(225, 0, 255, 0.2);
+    }
+    4%{
+        box-shadow: 
+        0 0 0 1px rgba(23, 114, 110, 0.055), /* Create an outer glow effect with a dark color */
+        0 0 65px rgba(9, 96, 167, 0.205),
+        0 0 118px rgba(57, 36, 92, 0.3),
+        0 0 18px rgba(255, 255, 255, 0.3),
+    
+        inset 0 0 8px rgba(64, 109, 160, 0.2);
+    }
+    19%{
+        box-shadow: 
+        0 0 0 1px rgba(221, 67, 2, 0.055), /* Create an outer glow effect with a dark color */
+        0 0 65px rgba(12, 167, 9, 0.205),
+        0 0 118px rgba(156, 186, 8, 0.3),
+        0 0 18px rgba(255, 149, 0, 0.3),
+    
+        inset 0 0 8px rgba(225, 0, 255, 0.2);
+    }
+    31%{
+        box-shadow: 
+        0 0 0 1px rgba(23, 114, 110, 0.055), /* Create an outer glow effect with a dark color */
+        0 0 65px rgba(9, 96, 167, 0.205),
+        0 0 118px rgba(57, 36, 92, 0.3),
+        0 0 18px rgba(255, 255, 255, 0.3),
+    
+        inset 0 0 8px rgba(64, 109, 160, 0.2);
+    }
+    87%{
+        box-shadow: 
+        0 0 0 1px rgba(203, 2, 221, 0.055), /* Create an outer glow effect with a dark color */
+        0 0 65px rgba(138, 9, 167, 0.205),
+        0 0 118px rgba(130, 8, 186, 0.3),
+        0 0 18px rgba(0, 0, 255, 0.3),
+    
+        inset 0 0 8px rgba(225, 0, 255, 0.2);
+    }
+    100%{
+        box-shadow: 
+        0 0 0 1px rgba(23, 114, 110, 0.055), /* Create an outer glow effect with a dark color */
+        0 0 65px rgba(9, 96, 167, 0.205),
+        0 0 118px rgba(57, 36, 92, 0.3),
+        0 0 18px rgba(255, 255, 255, 0.3),
+    
+        inset 0 0 8px rgba(64, 109, 160, 0.2);
+    }
 }
 
 
-  
+table{
+    /* margin:20px; */
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    border-collapse: collapse;
+    border: 10px solid #000;
+}
+  th, caption{
+    font-weight: 600;
+  }
+td{
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 5px;
+}
+th{
+    padding: 20px 10px;
+    border: 1px solid #fff;
+}
   
   
