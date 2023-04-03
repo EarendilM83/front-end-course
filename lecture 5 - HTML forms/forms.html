@@ -9,8 +9,8 @@
     <title>Forms</title>
 </head>
 <body>
-    <form class="example-form">
-        <input type="text" name="username" placeholder="Enter your username">
+    <form action="./success.html"class="example-form">
+        <!-- <input type="text" name="username" placeholder="Enter your username">
 
         <input type="password" name="password" placeholder="Enter your password">
 
@@ -41,8 +41,27 @@
 
         <button type="button" onclick="myFunction()">Click me</button>
 
-        <div data-step="1"></div>
+        <div data-step="1"></div> -->
 
+
+        <div class="form-gorup">
+            <input name="gender-selection" id="male" type="radio">
+            <label for="male">Male</label>
+
+            <input name="gender-selection" id="female" type="radio">
+            <label for="female">Female</label>
+
+            <input name="gender-selection" id="not" type="radio">
+            <label for="not">I dont want to tell</label>
+        </div>
+
+        <div class="form-group">
+            <input id="terms" type="checkbox">
+            <label for="terms">terms and conditions</label>
+        </div>
+
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>

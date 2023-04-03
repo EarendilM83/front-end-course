@@ -15,7 +15,8 @@
     justify-content: center;
 }
 .card{
-    background-color: #fff;
+    /* background-color: #a2ca53; */
+    background-image: url(https://i.ibb.co/B6SbgDk/The-Cyber-Firefly-black-roach-with-green-glowing-lines-cyberpunk-d4879d00-206f-435d-aa85-6c37eaa5831.png);
     border: 1px solid #333;
     border-radius: .5rem;
     padding: .5rem;
@@ -23,6 +24,7 @@
     min-width: 300px;
     margin: 0 auto;
     display: none;
+
 }
 
 .form-group{
@@ -54,4 +56,14 @@
 
 .active{
     display: block;
+}
+
+.radio-wrapper{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.radio-wrapper input, .radio-wrapper label {
+    margin: 20px 0;
 }

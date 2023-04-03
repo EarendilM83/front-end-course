@@ -14,23 +14,31 @@
         <form data-multi-step action="./success.html">
             <div class="card" data-step>
                 <h3 class="step-title">Registration Profile</h3>
-                <div class="form-group">
-                    
+
+                <div class="form-group radio-wrapper">
                    <input name="passSelection" type="radio" id="regularPass">
                    <label for="regularPass">Regular Pass</label>
-
-                   <input name="passSelection"  type="radio" id="businessPass">
-                   <label for="businessPass">Business Pass</label>
-
-
-                   <input name="passSelection"  type="radio" id="arenaPass">
-                   <label for="arenaPass">Arena Pass</label>
-
-                   
-                   <input name="passSelection"  type="radio" id="vipPass">
-                   <label for="vipPass">VIP Pass</label>
-
                 </div>
+
+                <div class="form-group radio-wrapper">
+                        <input name="passSelection"  type="radio" id="businessPass">
+                        <label for="businessPass">Business Pass</label>
+                </div>
+                   
+
+                <div class="form-group radio-wrapper">
+                        <input name="passSelection"  type="radio" id="arenaPass">
+                        <label for="arenaPass">Arena Pass</label>
+                </div>
+                   
+
+                <div class="form-group radio-wrapper">
+                        <input name="passSelection"  type="radio" id="vipPass">
+                        <label for="vipPass">VIP Pass</label>
+                </div>  
+                   
+
+                
                
                 <button type="button" data-next>Next</button>
             </div>
@@ -204,11 +212,11 @@
                             <option value="AZ" label="Azerbaijan">Azerbaijan</option>
                             <option value="BH" label="Bahrain">Bahrain</option>
                             <option value="BD" label="Bangladesh">Bangladesh</option>
-                            <option value="BT" label="Bhutan">Bhutan</option>
+                            <option  selected value="BT" label="Bhutan">Bhutan</option>
                             <option value="BN" label="Brunei">Brunei</option>
                             <option value="KH" label="Cambodia">Cambodia</option>
                             <option value="CN" label="China">China</option>
-                            <option value="GE" selected label="Georgia">Georgia</option>
+                            <option value="GE" label="Georgia">Georgia</option>
                             <option value="HK" label="Hong Kong SAR China">Hong Kong SAR China</option>
                             <option value="IN" label="India">India</option>
                             <option value="ID" label="Indonesia">Indonesia</option>
