@@ -1,67 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../baseAssets/reset.css">
-    <link rel="stylesheet" href="./style.css">
-    <title>Forms</title>
+	<meta charset="utf-8">
+	<title>Mandelbrot Set</title>
+	<style>
+		canvas {
+			border: 1px solid black;
+		}
+        canvas {
+	display: block;
+	margin: 0 auto;
+}
+
+	</style>
 </head>
 <body>
-    <form action="./success.html"class="example-form">
-        <!-- <input type="text" name="username" placeholder="Enter your username">
+	<canvas id="canvas" width="600" height="600"></canvas>
+	<script>
+            var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-        <input type="password" name="password" placeholder="Enter your password">
+var MAX_ITER = 100;
+var SCALE = 200;
+var offsetX = canvas.width / 2;
+var offsetY = canvas.height / 2;
 
-        <input type="email" name="email" placeholder="Enter your email">
+for (var x = 0; x < canvas.width; x++) {
+	for (var y = 0; y < canvas.height; y++) {
+		var real = (x - offsetX) / SCALE;
+		var imag = (y - offsetY) / SCALE;
+		var c = new Complex(real, imag);
+		var z = new Complex(0, 0);
+		var n = 0;
+		
+		while (n < MAX_ITER && z.abs() < 2) {
+			z = z.square().add(c);
+			n++;
+		}
+		
+		if (n == MAX_ITER) {
+			ctx.fillStyle = "#000000";
+			ctx.fillRect(x, y, 1, 1);
+		} else {
+			var hue = n / MAX_ITER * 360;
+			var saturation = "100%";
+			var lightness = n / MAX_ITER * 50 + 50 + "%";
+			ctx.fillStyle = "hsl(" + hue + ", " + saturation + ", " + lightness + ")";
+			ctx.fillRect(x, y, 1, 1);
+		}
+	}
+}
 
-        <input type="number" name="age" min="18" max="99" placeholder="Enter your age">
+function Complex(real, imag) {
+	this.real = real;
+	this.imag = imag;
+}
 
-        <input type="date" name="birthdate" placeholder="Enter your birthdate">
+Complex.prototype.add = function(other) {
+	return new Complex(this.real + other.real, this.imag + other.imag);
+};
 
-        <input type="time" name="appointment_time" placeholder="Enter your appointment time">
+Complex.prototype.square = function() {
+	var real = this.real * this.real - this.imag * this.imag;
+	var imag = 2 * this.real * this.imag;
+	return new Complex(real, imag);
+};
 
-        <input id="reading" type="checkbox" name="hobbies[]" value="reading">
-        <label for="reading">Reading</label>
+Complex.prototype.abs = function() {
+	return Math.sqrt(this.real * this.real + this.imag * this.imag);
+};
 
-        <input id="travelling" type="checkbox" name="hobbies[]" value="travelling">
-        <label for="travelling">Travelling</label>
-
-        <input type="radio" name="gender" value="male">
-        <label for="male">Male</label>
-
-        <input type="radio" name="gender" value="female">
-        <label for="female">Female</label>
-
-        <input type="file" name="profile_pic">
-        <input type="submit" value="Submit">
-
-        <input type="reset" value="Reset">
-
-        <button type="button" onclick="myFunction()">Click me</button>
-
-        <div data-step="1"></div> -->
-
-
-        <div class="form-gorup">
-            <input name="gender-selection" id="male" type="radio">
-            <label for="male">Male</label>
-
-            <input name="gender-selection" id="female" type="radio">
-            <label for="female">Female</label>
-
-            <input name="gender-selection" id="not" type="radio">
-            <label for="not">I dont want to tell</label>
-        </div>
-
-        <div class="form-group">
-            <input id="terms" type="checkbox">
-            <label for="terms">terms and conditions</label>
-        </div>
-
-        <button type="reset">Reset</button>
-        <button type="submit">Submit</button>
-    </form>
+    </script>
 </body>
 </html>
