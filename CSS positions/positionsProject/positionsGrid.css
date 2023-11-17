@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Old+Uyghur&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    height: 300vh;
+    background-image: url(../../baseAssets/images/candyshopbg.png);
+    background-size: cover;
+}
+
+.wrapper {
+    max-width: 950px;
+    margin: auto;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.box {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: middle;
+    /* line-height: 200px; */
+    margin: 5px;
+    font-size: 1rem;
+    font-family: 'Noto Serif Old Uyghur', serif;
+}
+
+
+.box:nth-child(1) {
+    background-color: #845ec2bb;
+}
+
+.box:nth-child(2) {
+    background-color: #9B89B4bb;
+}
+
+.box:nth-child(3) {
+    background-color: #D65DB1bb;
+}
+
+.box:nth-child(4) {
+    background-color: #FF6F91bb;
+}
+
+.box:nth-child(5) {
+    background-color: #FF9671bb;
+}
+
+.box:nth-child(6) {
+    background-color: #FFC75Fbb;
+}
+
+.box:nth-child(7) {
+    background-color: #F9F871bb;
+}
+
+.box:nth-child(8) {
+    background-color: #AA87E3bb;
+}
+
+.box:nth-child(9) {
+    background-color: #5C8BE2bb;
+}
+
+.box:nth-child(10) {
+    background-color: #008ACEbb;
+}
+
+.box:nth-child(11) {
+    background-color: #0084ADbb;
+}
+
+.box:nth-child(12) {
+    background-color: #007A84bb;
+}
+
+.box:hover {
+    /* background-color: #F9F871; */
+    box-shadow: inset 0 14px 30px 40px rgba(123, 206, 22, 0.691);
+}
+
+.candy-image {
+    width: 80%;
+}
+.box-1 {
+    position: sticky;
+    top: 300px;
+    left: 250px;
+    /* top: 50px; */
+}
+
+.box-2 {
+    position: fixed;
+    width: 100%;
+    top: 200px;
+}
+
+.box-2 img {
+    width: 13rem;
+}
+
+/* .container{
+    position: relative;
+} */
